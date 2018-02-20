@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace TeduShop.Data.Infrastructure
 {
-    public abstract class RepositotyBase<T>:IRepository<T> where T : class
+    public abstract class RepositoryBase<T>:IRepository<T> where T : class
     {
         #region Properties
 
@@ -26,7 +26,7 @@ namespace TeduShop.Data.Infrastructure
 
         #endregion Properties
 
-        protected RepositotyBase(IDbFactory dbFactory)
+        protected RepositoryBase(IDbFactory dbFactory)
         {
             DbFactory = dbFactory;
             dbSet = DbContext.Set<T>();
